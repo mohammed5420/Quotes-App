@@ -1,0 +1,253 @@
+* {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.contener {
+  position: relative
+}
+body {
+  background-color: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-header {
+  position: relative;
+  text-transform: capitalize;
+  text-align: center;
+  margin: calc(2vw + 4rem) auto;
+  font-size: 3rem;
+
+}
+
+.cards-contener {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 5vw 4rem;
+  gap: 4rem;
+}
+.header-contener {
+  padding: 2rem 5vw ;
+}
+
+.card {
+  max-width: calc(124rem / 4);
+  width: 90%;
+  border-radius: .6rem;
+  background-color: rgba(17, 17, 17, 0.69);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 3px 2.4rem rgba(0, 0, 0, 0.39);
+  transition: transform 450ms ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+.svg {
+  width: 100%;
+}
+
+.outline {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.outline-head{
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
+.quote-text {
+  font-size: 2rem;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quote-author {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 300;
+  text-align: right;
+}
+.fav {
+  
+  border-bottom: .2rem solid #179ace;
+  padding-bottom: 6rem;
+  margin-bottom: 4rem;
+}
+.controlers {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5vw ;
+  position: relative;
+  margin: 2rem 1rem;
+}
+
+.spam {
+  padding: 0;
+  width: 100%;
+}
+.spam span {
+  display: block;
+  height: 14rem;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0) , rgb(255, 255, 255) , rgb(0, 0, 0));
+  background-position: left;
+  background-size: 500%;
+  animation: Wave ease-in-out 1s 250ms infinite;
+}
+.btn , 
+.btn:focus{
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: .2rem solid #179ace;
+  border-radius: .3rem;
+  padding: .8rem 1.3rem;
+  display: flex;
+  transform: translateY(-50%);
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn span {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 200;
+  
+}
+.next-btn {
+    right: 2rem;
+}
+
+.pre-btn {
+  left: 2rem;
+}
+.page-number {
+  position: absolute;
+  font-size: 1.3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  border-bottom: .1rem solid #179ace;
+}
+.next-btn img {
+  transform: rotate(180deg);
+  margin-left: .5rem;
+
+}
+
+
+
+.pre-btn img{
+  margin-right: .5rem;
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 10rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 1px 2.4rem rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.btn-up img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%) rotate(90deg);
+  width: 3rem;
+}
+
+@keyframes Wave {
+  0% {
+    background-size: 800%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: #eee;
+  width: 30rem;
+  border-radius: .7rem;
+  z-index: 9999;
+  text-align: center;
+}
+
+.error-icon {
+  background-color: rgb(236, 21, 21);
+  padding: 2rem;
+  text-align: center;
+  border-radius: .7rem .7rem 0 0;
+  margin-bottom: 2rem;
+}
+
+.error-icon img {
+  width: 5rem;
+}
+
+.error-text {
+  padding: 1rem 2rem 2rem;
+  text-align: center;
+}
+
+.error-text h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: rgb(32, 32, 32);
+}
+.error-text p {
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+.error-btn , .error-btn:focus {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border: 0;
+  background-color: rgb(236, 21, 21);
+  color: white;
+  border-radius: 100rem;
+  margin: 0 0 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
